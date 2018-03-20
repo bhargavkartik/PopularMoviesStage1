@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_backdrop"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/content_description_backdrop"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/iv_poster"
+                app:layout_constraintTop_toBottomOf="@+id/iv_backdrop"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_poster"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vote_average"
+                tools:text="2018-02-13" />
+
+            <TextView
+                android:id="@+id/tv_vote_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_movie_title"
+                tools:text="7.4" />
+
+            <ImageView
+                android:id="@+id/iv_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintDimensionRatio="9:16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_backdrop"
+                app:srcCompat="@drawable/ic_star" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/iv_poster"
+                app:layout_constraintTop_toBottomOf="@+id/tv_movie_title"
+                app:srcCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_poster"
+                tools:text="Overview: "
+                android:layout_marginEnd="8dp"
+                android:paddingEnd="8dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
